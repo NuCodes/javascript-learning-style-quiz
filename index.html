@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!--required meta--> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--Custom css-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>"What is your learning style?" JavaScript Quiz</title>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+    <div class="wrapper"> 
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+      </div>
+      
+      <div id="quizarea">
+        <div id="title" >
+          <div class="col">
+            <h1 class="text-center">What is your learning style?</h1>
+            <br />
+          </div>
+        </div>
+
+        <div id="questionarea">
+            <!--intro content-->
+            <div id="intro" class="justify-content-center mx-auto">
+              <h3 class="text-center"><i>Find our your learning style</i></h3>
+              <br />
+              <p class="text-center">There are three basic types of learning styles. The three most common are visual, auditory, and kinesthetic. To learn, we depend on our senses to process the information around us. Most people tend to use one of their senses more than others. This quiz will help you determine which of these learning styles you rely on the most.</p><br />
+              <p class="text-center">In this quiz there are a series of 16 questions that are related to the three main learning styles. Read the question and select the answer that closests fits your answer. Don't think about the questions too much. Go with your first choice. At the end of the quiz, a result will be dispalyed showing your prefered learning style.</p><br />
+              <input type="button" value="Start Quiz" class="btn btn-secondary text-center" onclick="startQuiz()"/>
+            </div>
+            <form id="quizform">
+            <!--question 1-->
+            <div id="question1" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+                <h5 class="text-center">Question (1/16)</h5> 
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2>When you study for a test would you rather?</h2>
+              </div>
+              <div class="row">
+                &nbsp;
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest1" id="a1" value=1 data-toggle="tooltip" title="a" onclick="question2()"/>
+                <label for="a1" class="text-center">a) Read notes, read headings in a book, and look at diagrams and illustrations.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest1" id="a2" value=2 data-toggle="tooltip" title="b" onclick="question2()"/> 
+                <label for="a2">b) Have someone ask you questions, or repeat facts silently to yourself.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest1" id="a3" value=3 data-toggle="tooltip" title="c" onclick="question2()"/>
+                <label for="a3">c) Write things out on index cards and make models or diagrams.</label>
+              </div>
+              &nbsp;
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question2()"/>
+              </div>
+            </div>
+            <!--question 2-->
+            <div id="question2" class="mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="6.25" aria-valuemin="0" aria-valuemax="100" style="width: 6.25%"></div>
+                </div>
+                <h5 class="text-center">Question (2/16)</h5> 
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2>Which of these do you do when you listen to music?</h2>
+              </div>
+              <div class="row">
+              &nbsp;
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest2" id="a4" value=1 data-toggle="tooltip" title="a" onclick="question3()" />
+                <label for="a4" class="text-center">a) Daydream (see things that go with the music).</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest2" id="a5" value=2 data-toggle="tooltip" title="b" onclick="question3()"/> 
+                <label for="a5">b) Hum along.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest2" id="a6" value=3 data-toggle="tooltip" title="c" onclick="question3()" />
+                <label for="a6">c) Move with the music, tap your foot, etc.</label>
+              </div>
+              &nbsp;
+              <div class="row" class="justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question3()"/>
+              </div>
+            </div>
+             <!--question 3-->
+             <div id="question3">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="12.5" aria-valuemin="0" aria-valuemax="100" style="width: 12.5%"></div>
+                </div>
+                <h5 class="text-center">Question (3/16)</h5> 
+              </div>
+              &nbsp;
+              <div class="row justify-content-center"> 
+                <h2>When you work at solving a problem do you:</h2>
+              </div>
+              <div class="row">
+                &nbsp;
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest3" id="a7" value=1 data-toggle="tooltip" title="a" onclick="question4()"/>
+                <label for="a7" class="text-center">a) Make a list, organize the steps, and check them off as they are done. </label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest3" id="a8" value=2 data-toggle="tooltip" title="b" onclick="question4()"/>
+                <label for="a8">b) Make a few phone calls and talk to friends or experts.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest3" id="a9" value=3 data-toggle="tooltip" title="c" onclick="question4()"/>
+                <label for="a9">c) Make a model of the problem or walk through all the steps in your mind.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question4()"/>
+              </div>
+            </div>
+            <!--question 4-->
+             <div id="question4">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="18.75" aria-valuemin="0" aria-valuemax="100" style="width: 18.75%"></div>
+                </div>
+                <h5 class="text-center">Question (4/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">         
+                <h2>When you read for fun, do you prefer:</h2>
+              </div>
+              <div class="row">
+                &nbsp;
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest4" id="a10" value=1 data-toggle="tooltip" title="a" onclick="question5()"/>
+                <label for="a10" class="text-center">a) A travel book with a lot of pictures in it.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest4" id="a11" value=2 data-toggle="tooltip" title="b" onclick="question5()"/>
+                <label for="a11">b) A mystery book with a lot of conversation in it.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest4" id="a12" value=3 data-toggle="tooltip" title="c" onclick="question5()"/>
+                <label for="a12">c) A book where you answer questions and solve problems.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question5()"/>
+              </div>
+            </div>
+            <!--question 5-->
+            <div id="question5">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+                </div>
+                <h5 class="text-center">Question (5/16)</h5>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">To learn how a computer works, would you rather:</h2>
+              </div>
+              <div class="row">
+                &nbsp;
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest5" id="a13" value=1 data-toggle="tooltip" title="a" onclick="question6()"/>
+                <label for="a13" class="text-center">a) Watch a movie about it.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest5" id="a14" value=2 data-toggle="tooltip" title="b" onclick="question6()"/>
+                <label for="a14">b) Listen to someone explain it.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest5" id="a15" value=3 data-toggle="tooltip" title="c" onclick="question6()"/>
+                <label for="a15">c) Take the computer apart and try to figure it out yourself.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question6()"/>
+              </div>
+            </div>
+            <!--question 6-->
+            <div id="question6">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="31.25" aria-valuemin="0" aria-valuemax="100" style="width: 31.25%"></div>
+                </div>
+                <h5 class="text-center">Question (6/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">You have just entered a science museum, what will you do first?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest6" id="a16" value=1 data-toggle="tooltip" title="a" onclick="question7()"/>
+                <label for="a16" class="text-center">a) Look around and find a map showing the locations of the various exhibits.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest6" id="a17" value=2 data-toggle="tooltip" title="b" onclick="question7()"/>
+                <label for="a17">b) Talk to a museum guide and ask about exhibits.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest6" id="a18" value=3 data-toggle="tooltip" title="c" onclick="question7()"/>
+                <label for="a18">c) Go into the first exhibit that looks interesting, and read directions later.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question7()"/>
+              </div>
+            </div>
+             <!--question 7-->
+             <div id="question7">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="37.5" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%"></div>
+                </div>
+                &nbsp;
+                <h5 class="text-center">Question (7/16)</h5>
+              </div>  
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">What kind of restaurants would you rather <b>not</b> go to?</h2>
+              </div>
+              <div class="row">
+                &nbsp;
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest7" id="a19" value=1 data-toggle="tooltip" title="a" onclick="question8()"/>
+                <label for="a19" class="text-center">a) One with the lights too bright.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest7" id="a20" value=2 data-toggle="tooltip" title="b" onclick="question8()"/>
+                <label for="a20">b) One with the music too loud.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest7" id="a21" value=3 data-toggle="tooltip" title="c" onclick="question8()"/>
+                <label for="a21">c) One with uncomfortable chairs.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question8()"/>
+              </div>
+            </div>
+            <!--question 8-->
+            <div id="question8">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="43.75" aria-valuemin="0" aria-valuemax="100" style="width: 43.75%"></div>
+                </div>
+                <h5 class="text-center">Question (8/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">Would you rather go to:</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest8" id="a22" value=1 data-toggle="tooltip" title="a" onclick="question9()"/>
+                  <label for="a22" class="text-center">a) An art class.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest8" id="a23" value=2 data-toggle="tooltip" title="b" onclick="question9()"/>
+                <label for="a23">b) A music class.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest8" id="a24" value=3 data-toggle="tooltip" title="c" onclick="question9()"/>
+                <label for="a24">c) An exercise class.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question9()"/>
+              </div>
+            </div>
+            <!--question 9-->
+            <div id="question9">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                </div>
+                <h5 class="text-center">Question (9/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">Which are you most likely to do when you are happy?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest9" id="a25" value=1 data-toggle="tooltip" title="a" onclick="question10()" />
+                  <label for="a25" class="text-center">a) Grin.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest9" id="a26" value=2 data-toggle="tooltip" title="b" onclick="question10()"/>
+                <label for="a26">b) Shout with joy.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest9" id="a27" value=3 data-toggle="tooltip" title="c" onclick="question10()"/>
+                <label for="a27">c) Jump for joy.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question10()"/>
+              </div>
+            </div>
+            <!--question 10-->
+            <div id="question10">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="56.25" aria-valuemin="0" aria-valuemax="100" style="width: 56.25%"></div>
+                </div>
+                <h5 class="text-center">Question (10/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">If you were at a party, what would you be most likely to remember the next day?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest10" id="a28" value=1 data-toggle="tooltip" title="a" onclick="question11()" />
+                <label for="a28" class="text-center">a) The faces of the people there, but not the names.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest10" id="a29" value=2 data-toggle="tooltip" title="b" onclick="question11()"/>
+                <label for="a29">b) The names but not the faces.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest10" id="a30" value=3 data-toggle="tooltip" title="c" onclick="question11()"/>
+                <label for="a30">c) The things you did and said while you were there.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question11()"/>
+              </div>
+            </div>
+             <!--question 11-->
+             <div id="question11">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="62.5" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%"></div>
+                </div>
+                <h5 class="text-center">Question (11/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">When you see the word "d-o-g", what do you do first?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest11" id="a31" value=1 data-toggle="tooltip" title="a" onclick="question12()" />
+                <label for="a31" class="text-center">a) Think of a picture of a particular dog.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest11" id="a32" value=2 data-toggle="tooltip" title="b" onclick="question12()"/>
+                <label for="a32">b) Say the word "dog" to yourself silently.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest11" id="a33" value=3 data-toggle="tooltip" title="c" onclick="question12()"/>
+                <label for="a33">c) Sense the feeling of being with a dog (petting it, running with it, etc.).</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question12()"/>
+              </div>
+            </div>
+             <!--question 12-->
+             <div id="question12">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="68.75" aria-valuemin="0" aria-valuemax="100" style="width: 68.75%"></div>
+                </div>
+                <h5 class="text-center">Question (12/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">When you tell a story, would you rather:</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest12" id="a34" value=1 data-toggle="tooltip" title="a" onclick="question13()" />
+                <label for="a34" class="text-center">a) Write it.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest12" id="a35" value=2 data-toggle="tooltip" title="b" onclick="question13()"/>
+                <label for="a35">b) Tell it out loud.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest12" id="a36" value=3 data-toggle="tooltip" title="c" onclick="question13()"/>
+                <label for="a36">c) Act it out.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question13()"/>
+              </div>
+            </div>
+            <!--question 13-->
+            <div id="question13">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                </div>
+                <h5 class="text-center">Question (13/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">What is most distracting for you when you are trying to concentrate?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest13" id="a37" value=1 data-toggle="tooltip" title="a" onclick="question14()" />
+                <label for="a37" class="text-center">a) Visual distractions.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest13" id="a38" value=2 data-toggle="tooltip" title="b" onclick="question14()"/>
+                <label for="a38">b) Noises.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest13" id="a39" value=3 data-toggle="tooltip" title="c" onclick="question14()"/>
+                <label for="a39">c) Other sensations like hunger, tight shoes, or worry.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question14()"/>
+              </div>
+            </div>
+             <!--question 14-->
+             <div id="question14">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="81.25" aria-valuemin="0" aria-valuemax="100" style="width: 81.25%"></div>
+                </div>
+                <h5 class="text-center">Question (14/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">What are you most likely to do when angry?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest14" id="a40" value=1 data-toggle="tooltip" title="a" onclick="question15()" />
+                <label for="a40" class="text-center">a) Scowl.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest14" id="a41" value=2 data-toggle="tooltip" title="b" onclick="question15()"/>
+                <label for="a41">b) Shout or "blow up".</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest14" id="a42" value=3 data-toggle="tooltip" title="c" onclick="question15()"/>
+                <label for="a42">c) Stomp off and slam doors.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question15()"/>
+              </div>
+            </div>
+             <!--question 15-->
+             <div id="question15">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="87.5" aria-valuemin="0" aria-valuemax="100" style="width: 87.5%"></div>
+                </div>
+                <h5 class="text-center">Question (15/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">When you aren't sure how to spell a word, which of these are you most likely to do?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest15" id="a43" value=1 data-toggle="tooltip" title="a" onclick="question16()" />
+                <label for="a43" class="text-center">a) Write it out to see if it looks right.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest15" id="a44" value=2 data-toggle="tooltip" title="b" onclick="question16()"/>
+                <label for="a44">b) Sound it out.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest15" id="a45" value=3 data-toggle="tooltip" title="c" onclick="question16()"/>
+                <label for="a45">c) Write it out to see if it feels right.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question16()"/>
+              </div>
+            </div>
+             <!--question 16-->
+             <div id="question16">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="93.75" aria-valuemin="0" aria-valuemax="100" style="width: 93.75%"></div>
+                </div>
+                <h5 class="text-center">Question (16/16)</h5>
+              </div> 
+              &nbsp;
+              <div class="row justify-content-center">
+                <h2 class="text-center">Which are you most likely to do when standing in a long line at the movies?</h2>
+              </div>
+              <div class="row">
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="radio" name="quest16" id="a46" value=1 data-toggle="tooltip" title="a"/>
+                <label for="a46" class="text-center">a) Look at posters advertising other movies.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest16" id="a47" value=2 data-toggle="tooltip" title="b"/>
+                <label for="a47">b) Talk to the person next to you.</label>
+              </div>
+              <div class="row justify-content-center">
+                <input type="radio" name="quest16" id="a48" value=3 data-toggle="tooltip" title="c"/>
+                <label for="a48">c) Tap your foot or move around in some other way.</label>
+              </div>
+              &nbsp;
+              <div class="row justify-content-center">
+                <input type="button" value="Results" class="btn btn-secondary mx-auto" onclick="results()"/>
+              </div>
+            </div>
+            </form>
+
+            <!--Results-->
+            <div id="results" class="justify-content-center mx-auto">
+              <div class="row justify-content-center">
+                <div class="progress">
+                  <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>
+              &nbsp;
+              </div>
+              <h3 class="text-center"><i>Your Learning Style Result:</i></h3>
+              <div>
+                <p class="text-center" id="result"></p>
+                <img src="Images/learning.jpg" alt="A picture of people studying." height="200px" width="350px">
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- link to external JavaScript-->
+    <script src="code.js" type="text/javascript"></script>
+
+  </body>
+</html>
