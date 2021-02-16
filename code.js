@@ -1,138 +1,15 @@
 /**
- * hides intro and show question 1
+ * hides current question shows next question
  */
-function startQuiz() {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("question1").style.display = "inline-block";
+function question(questionHide, questionReveal) {
+  document.getElementById(questionHide).style.display = "none";
+  document.getElementById(questionReveal).style.display = "inline-block";
 }
 
-/**
- * hides question 1 shows question 2
- */
-function question2() {
-  document.getElementById("question1").style.display = "none";
-  document.getElementById("question2").style.display = "inline-block";
-}
-
-/**
- * hides question 2 shows question 3
- */
-function question3() {
-  document.getElementById("question2").style.display = "none";
-  document.getElementById("question3").style.display = "inline-block";
-}
-
-/**
- * hides question 3 shows question 4
- */
-function question4() {
-  document.getElementById("question3").style.display = "none";
-  document.getElementById("question4").style.display = "inline-block";
-}
-
-/**
- * hides question 4 shows question 5
- */
-function question5() {
-  document.getElementById("question4").style.display = "none";
-  document.getElementById("question5").style.display = "inline-block";
-}
-
-/**
- * hides question 5 shows question 6
- */
-function question6() {
-  document.getElementById("question5").style.display = "none";
-  document.getElementById("question6").style.display = "inline-block";
-}
-
-/**
- * hides question 6 shows question 7
- */
-function question7() {
-  document.getElementById("question6").style.display = "none";
-  document.getElementById("question7").style.display = "inline-block";
-}
-
-/**
- * hides question 7 shows question 8
- */
-function question8() {
-  document.getElementById("question7").style.display = "none";
-  document.getElementById("question8").style.display = "inline-block";
-}
-
-/**
- * hides question 8 shows question 9
- */
-function question9() {
-  document.getElementById("question8").style.display = "none";
-  document.getElementById("question9").style.display = "inline-block";
-}
-
-/**
- * hides question 9 shows question 10
- */
-function question10() {
-  document.getElementById("question9").style.display = "none";
-  document.getElementById("question10").style.display = "inline-block";
-}
-
-/**
- * hides question 10 shows question 11
- */
-function question11() {
-  document.getElementById("question10").style.display = "none";
-  document.getElementById("question11").style.display = "inline-block";
-}
-
-/**
- * hides question 11 shows question 12
- */
-function question12() {
-  document.getElementById("question11").style.display = "none";
-  document.getElementById("question12").style.display = "inline-block";
-}
-
-/**
- * hides question 12 shows question 13
- */
-function question13() {
-  document.getElementById("question12").style.display = "none";
-  document.getElementById("question13").style.display = "inline-block";
-}
-
-/**
- * hides question 13 shows question 14
- */
-function question14() {
-
-  document.getElementById("question13").style.display = "none";
-  document.getElementById("question14").style.display = "inline-block";
-}
-
-/**
- * hides question 14 shows question 15
- */
-function question15() {
-  document.getElementById("question14").style.display = "none";
-  document.getElementById("question15").style.display = "inline-block";
-}
-
-/**
- * hides question 15 shows question 16
- */
-function question16() {
-  document.getElementById("question15").style.display = "none";
-  document.getElementById("question16").style.display = "inline-block";
-}
-
-/**
- * hides question 16 shows results
- */
+// hides last question and displays result
 function results() {
   calculateResults()
-  document.getElementById("question16").style.display = "none";
+  document.getElementById("q16").style.display = "none";
   document.getElementById("results").style.display = "inline-block";
 }
 
