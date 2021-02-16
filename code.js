@@ -166,12 +166,16 @@ function calculateResults() {
   
   if (result > 2)  {
     msg = "You answered mostly C, you may have a KINESTHETIC learning style."; 
+    document.getElementById("resultsImg1").style.display = 'inline-block';
   } else if (result >= 1.5) {
     msg = "You answered mostly B, you may have an AUDITORY learning style.";
+    document.getElementById("resultsImg2").style.display = 'inline-block';
   } else if (result >= 0.5) {
     msg = "You answered mostly A, you may have a VISUAL learning style.";
+    document.getElementById("resultsImg3").style.display = 'inline-block';
   } else {
     msg = "Unable to provide an accurate result. Please refresh the page and re-take the quiz.";
+    document.getElementById("resultsImg4").style.display = 'inline-block';
   }
   document.getElementById("result").innerHTML = msg
 }
