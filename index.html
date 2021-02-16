@@ -48,11 +48,11 @@
               <br />
               <p class="text-center">There are three basic types of learning styles. The three most common are visual, auditory, and kinesthetic. To learn, we depend on our senses to process the information around us. Most people tend to use one of their senses more than others. This quiz will help you determine which of these learning styles you rely on the most.</p><br />
               <p class="text-center">In this quiz there are a series of 16 questions that are related to the three main learning styles. Read the question and select the answer that closests fits your answer. Don't think about the questions too much. Go with your first choice. At the end of the quiz, a result will be dispalyed showing your prefered learning style.</p><br />
-              <input type="button" value="Start Quiz" class="btn btn-secondary text-center" onclick="startQuiz()"/>
+              <input type="button" value="Start Quiz" class="btn btn-secondary text-center" onclick="question('intro','q1')"/>
             </div>
             <form id="quizform">
             <!--question 1-->
-            <div id="question1" class="mx-auto">
+            <div id="q1" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
@@ -67,24 +67,24 @@
                 &nbsp;
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest1" id="a1" value=1 data-toggle="tooltip" title="a" onclick="question2()"/>
+                <input type="radio" name="quest1" id="a1" value=1 data-toggle="tooltip" title="a" onclick="question('q1', 'q2')"/>
                 <label for="a1" class="text-center">a) Read notes, read headings in a book, and look at diagrams and illustrations.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest1" id="a2" value=2 data-toggle="tooltip" title="b" onclick="question2()"/> 
+                <input type="radio" name="quest1" id="a2" value=2 data-toggle="tooltip" title="b" onclick="question('q1', 'q2')"/> 
                 <label for="a2">b) Have someone ask you questions, or repeat facts silently to yourself.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest1" id="a3" value=3 data-toggle="tooltip" title="c" onclick="question2()"/>
+                <input type="radio" name="quest1" id="a3" value=3 data-toggle="tooltip" title="c" onclick="question('q1', 'q2')"/>
                 <label for="a3">c) Write things out on index cards and make models or diagrams.</label>
               </div>
               &nbsp;
               <div class="row" class="justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question2()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q1', 'q2')"/>
               </div>
             </div>
             <!--question 2-->
-            <div id="question2" class="mx-auto">
+            <div id="q2" class="mx-auto">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="6.25" aria-valuemin="0" aria-valuemax="100" style="width: 6.25%"></div>
@@ -99,24 +99,24 @@
               &nbsp;
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest2" id="a4" value=1 data-toggle="tooltip" title="a" onclick="question3()" />
+                <input type="radio" name="quest2" id="a4" value=1 data-toggle="tooltip" title="a" onclick="question('q2', 'q3')" />
                 <label for="a4" class="text-center">a) Daydream (see things that go with the music).</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest2" id="a5" value=2 data-toggle="tooltip" title="b" onclick="question3()"/> 
+                <input type="radio" name="quest2" id="a5" value=2 data-toggle="tooltip" title="b" onclick="question('q2', 'q3')"/> 
                 <label for="a5">b) Hum along.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest2" id="a6" value=3 data-toggle="tooltip" title="c" onclick="question3()" />
+                <input type="radio" name="quest2" id="a6" value=3 data-toggle="tooltip" title="c" onclick="question('q2', 'q3')" />
                 <label for="a6">c) Move with the music, tap your foot, etc.</label>
               </div>
               &nbsp;
               <div class="row" class="justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question3()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q2', 'q3')"/>
               </div>
             </div>
              <!--question 3-->
-             <div id="question3">
+             <div id="q3">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="12.5" aria-valuemin="0" aria-valuemax="100" style="width: 12.5%"></div>
@@ -131,24 +131,24 @@
                 &nbsp;
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest3" id="a7" value=1 data-toggle="tooltip" title="a" onclick="question4()"/>
+                <input type="radio" name="quest3" id="a7" value=1 data-toggle="tooltip" title="a" onclick="question('q3', 'q4')"/>
                 <label for="a7" class="text-center">a) Make a list, organize the steps, and check them off as they are done. </label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest3" id="a8" value=2 data-toggle="tooltip" title="b" onclick="question4()"/>
+                <input type="radio" name="quest3" id="a8" value=2 data-toggle="tooltip" title="b" onclick="question('q3', 'q4')"/>
                 <label for="a8">b) Make a few phone calls and talk to friends or experts.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest3" id="a9" value=3 data-toggle="tooltip" title="c" onclick="question4()"/>
+                <input type="radio" name="quest3" id="a9" value=3 data-toggle="tooltip" title="c" onclick="question('q3', 'q4')"/>
                 <label for="a9">c) Make a model of the problem or walk through all the steps in your mind.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question4()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q3', 'q4')"/>
               </div>
             </div>
             <!--question 4-->
-             <div id="question4">
+             <div id="q4">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="18.75" aria-valuemin="0" aria-valuemax="100" style="width: 18.75%"></div>
@@ -163,24 +163,24 @@
                 &nbsp;
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest4" id="a10" value=1 data-toggle="tooltip" title="a" onclick="question5()"/>
+                <input type="radio" name="quest4" id="a10" value=1 data-toggle="tooltip" title="a" onclick="question('q4', 'q5')"/>
                 <label for="a10" class="text-center">a) A travel book with a lot of pictures in it.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest4" id="a11" value=2 data-toggle="tooltip" title="b" onclick="question5()"/>
+                <input type="radio" name="quest4" id="a11" value=2 data-toggle="tooltip" title="b" onclick="question('q4', 'q5')"/>
                 <label for="a11">b) A mystery book with a lot of conversation in it.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest4" id="a12" value=3 data-toggle="tooltip" title="c" onclick="question5()"/>
+                <input type="radio" name="quest4" id="a12" value=3 data-toggle="tooltip" title="c" onclick="question('q4', 'q5')"/>
                 <label for="a12">c) A book where you answer questions and solve problems.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question5()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q4', 'q5')"/>
               </div>
             </div>
             <!--question 5-->
-            <div id="question5">
+            <div id="q5">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
@@ -195,24 +195,24 @@
                 &nbsp;
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest5" id="a13" value=1 data-toggle="tooltip" title="a" onclick="question6()"/>
+                <input type="radio" name="quest5" id="a13" value=1 data-toggle="tooltip" title="a" onclick="question('q5', 'q6')"/>
                 <label for="a13" class="text-center">a) Watch a movie about it.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest5" id="a14" value=2 data-toggle="tooltip" title="b" onclick="question6()"/>
+                <input type="radio" name="quest5" id="a14" value=2 data-toggle="tooltip" title="b" onclick="question('q5', 'q6')"/>
                 <label for="a14">b) Listen to someone explain it.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest5" id="a15" value=3 data-toggle="tooltip" title="c" onclick="question6()"/>
+                <input type="radio" name="quest5" id="a15" value=3 data-toggle="tooltip" title="c" onclick="question('q5', 'q6')"/>
                 <label for="a15">c) Take the computer apart and try to figure it out yourself.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question6()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q5', 'q6')"/>
               </div>
             </div>
             <!--question 6-->
-            <div id="question6">
+            <div id="q6">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="31.25" aria-valuemin="0" aria-valuemax="100" style="width: 31.25%"></div>
@@ -227,24 +227,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest6" id="a16" value=1 data-toggle="tooltip" title="a" onclick="question7()"/>
+                <input type="radio" name="quest6" id="a16" value=1 data-toggle="tooltip" title="a" onclick="question('q6', 'q7')"/>
                 <label for="a16" class="text-center">a) Look around and find a map showing the locations of the various exhibits.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest6" id="a17" value=2 data-toggle="tooltip" title="b" onclick="question7()"/>
+                <input type="radio" name="quest6" id="a17" value=2 data-toggle="tooltip" title="b" onclick="question('q6', 'q7')"/>
                 <label for="a17">b) Talk to a museum guide and ask about exhibits.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest6" id="a18" value=3 data-toggle="tooltip" title="c" onclick="question7()"/>
+                <input type="radio" name="quest6" id="a18" value=3 data-toggle="tooltip" title="c" onclick="question('q6', 'q7')"/>
                 <label for="a18">c) Go into the first exhibit that looks interesting, and read directions later.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question7()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q6', 'q7')"/>
               </div>
             </div>
              <!--question 7-->
-             <div id="question7">
+             <div id="q7">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="37.5" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%"></div>
@@ -260,24 +260,24 @@
                 &nbsp;
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest7" id="a19" value=1 data-toggle="tooltip" title="a" onclick="question8()"/>
+                <input type="radio" name="quest7" id="a19" value=1 data-toggle="tooltip" title="a" onclick="question('q7', 'q8')"/>
                 <label for="a19" class="text-center">a) One with the lights too bright.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest7" id="a20" value=2 data-toggle="tooltip" title="b" onclick="question8()"/>
+                <input type="radio" name="quest7" id="a20" value=2 data-toggle="tooltip" title="b" onclick="question('q7', 'q8')"/>
                 <label for="a20">b) One with the music too loud.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest7" id="a21" value=3 data-toggle="tooltip" title="c" onclick="question8()"/>
+                <input type="radio" name="quest7" id="a21" value=3 data-toggle="tooltip" title="c" onclick="question('q7', 'q8')"/>
                 <label for="a21">c) One with uncomfortable chairs.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question8()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q7', 'q8')"/>
               </div>
             </div>
             <!--question 8-->
-            <div id="question8">
+            <div id="q8">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="43.75" aria-valuemin="0" aria-valuemax="100" style="width: 43.75%"></div>
@@ -292,24 +292,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest8" id="a22" value=1 data-toggle="tooltip" title="a" onclick="question9()"/>
+                <input type="radio" name="quest8" id="a22" value=1 data-toggle="tooltip" title="a" onclick="question('q8', 'q9')"/>
                   <label for="a22" class="text-center">a) An art class.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest8" id="a23" value=2 data-toggle="tooltip" title="b" onclick="question9()"/>
+                <input type="radio" name="quest8" id="a23" value=2 data-toggle="tooltip" title="b" onclick="question('q8', 'q9')"/>
                 <label for="a23">b) A music class.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest8" id="a24" value=3 data-toggle="tooltip" title="c" onclick="question9()"/>
+                <input type="radio" name="quest8" id="a24" value=3 data-toggle="tooltip" title="c" onclick="question('q8', 'q9')"/>
                 <label for="a24">c) An exercise class.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question9()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q8', 'q9')"/>
               </div>
             </div>
             <!--question 9-->
-            <div id="question9">
+            <div id="q9">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
@@ -324,24 +324,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest9" id="a25" value=1 data-toggle="tooltip" title="a" onclick="question10()" />
+                <input type="radio" name="quest9" id="a25" value=1 data-toggle="tooltip" title="a" onclick="question('q9', 'q10')" />
                   <label for="a25" class="text-center">a) Grin.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest9" id="a26" value=2 data-toggle="tooltip" title="b" onclick="question10()"/>
+                <input type="radio" name="quest9" id="a26" value=2 data-toggle="tooltip" title="b" onclick="question('q9', 'q10')"/>
                 <label for="a26">b) Shout with joy.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest9" id="a27" value=3 data-toggle="tooltip" title="c" onclick="question10()"/>
+                <input type="radio" name="quest9" id="a27" value=3 data-toggle="tooltip" title="c" onclick="question('q9', 'q10')"/>
                 <label for="a27">c) Jump for joy.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question10()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q9', 'q10')"/>
               </div>
             </div>
             <!--question 10-->
-            <div id="question10">
+            <div id="q10">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="56.25" aria-valuemin="0" aria-valuemax="100" style="width: 56.25%"></div>
@@ -356,24 +356,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest10" id="a28" value=1 data-toggle="tooltip" title="a" onclick="question11()" />
+                <input type="radio" name="quest10" id="a28" value=1 data-toggle="tooltip" title="a" onclick="question('q10', 'q11')" />
                 <label for="a28" class="text-center">a) The faces of the people there, but not the names.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest10" id="a29" value=2 data-toggle="tooltip" title="b" onclick="question11()"/>
+                <input type="radio" name="quest10" id="a29" value=2 data-toggle="tooltip" title="b" onclick="question('q10', 'q11')"/>
                 <label for="a29">b) The names but not the faces.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest10" id="a30" value=3 data-toggle="tooltip" title="c" onclick="question11()"/>
+                <input type="radio" name="quest10" id="a30" value=3 data-toggle="tooltip" title="c" onclick="question('q10', 'q11')"/>
                 <label for="a30">c) The things you did and said while you were there.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question11()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q10', 'q11')"/>
               </div>
             </div>
              <!--question 11-->
-             <div id="question11">
+             <div id="q11">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="62.5" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%"></div>
@@ -388,24 +388,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest11" id="a31" value=1 data-toggle="tooltip" title="a" onclick="question12()" />
+                <input type="radio" name="quest11" id="a31" value=1 data-toggle="tooltip" title="a" onclick="question('q11', 'q12')" />
                 <label for="a31" class="text-center">a) Think of a picture of a particular dog.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest11" id="a32" value=2 data-toggle="tooltip" title="b" onclick="question12()"/>
+                <input type="radio" name="quest11" id="a32" value=2 data-toggle="tooltip" title="b" onclick="question('q11', 'q12')"/>
                 <label for="a32">b) Say the word "dog" to yourself silently.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest11" id="a33" value=3 data-toggle="tooltip" title="c" onclick="question12()"/>
+                <input type="radio" name="quest11" id="a33" value=3 data-toggle="tooltip" title="c" onclick="question('q11', 'q12')"/>
                 <label for="a33">c) Sense the feeling of being with a dog (petting it, running with it, etc.).</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question12()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q11', 'q12')"/>
               </div>
             </div>
              <!--question 12-->
-             <div id="question12">
+             <div id="q12">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="68.75" aria-valuemin="0" aria-valuemax="100" style="width: 68.75%"></div>
@@ -420,24 +420,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest12" id="a34" value=1 data-toggle="tooltip" title="a" onclick="question13()" />
+                <input type="radio" name="quest12" id="a34" value=1 data-toggle="tooltip" title="a" onclick="question('q12', 'q13')" />
                 <label for="a34" class="text-center">a) Write it.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest12" id="a35" value=2 data-toggle="tooltip" title="b" onclick="question13()"/>
+                <input type="radio" name="quest12" id="a35" value=2 data-toggle="tooltip" title="b" onclick="question('q12', 'q13')"/>
                 <label for="a35">b) Tell it out loud.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest12" id="a36" value=3 data-toggle="tooltip" title="c" onclick="question13()"/>
+                <input type="radio" name="quest12" id="a36" value=3 data-toggle="tooltip" title="c" onclick="question('q12', 'q13')"/>
                 <label for="a36">c) Act it out.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question13()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q12', 'q13')"/>
               </div>
             </div>
             <!--question 13-->
-            <div id="question13">
+            <div id="q13">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
@@ -452,24 +452,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest13" id="a37" value=1 data-toggle="tooltip" title="a" onclick="question14()" />
+                <input type="radio" name="quest13" id="a37" value=1 data-toggle="tooltip" title="a" onclick="question('q13', 'q14')" />
                 <label for="a37" class="text-center">a) Visual distractions.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest13" id="a38" value=2 data-toggle="tooltip" title="b" onclick="question14()"/>
+                <input type="radio" name="quest13" id="a38" value=2 data-toggle="tooltip" title="b" onclick="question('q13', 'q14')"/>
                 <label for="a38">b) Noises.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest13" id="a39" value=3 data-toggle="tooltip" title="c" onclick="question14()"/>
+                <input type="radio" name="quest13" id="a39" value=3 data-toggle="tooltip" title="c" onclick="question('q13', 'q14')"/>
                 <label for="a39">c) Other sensations like hunger, tight shoes, or worry.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question14()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q13', 'q14')"/>
               </div>
             </div>
              <!--question 14-->
-             <div id="question14">
+             <div id="q14">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="81.25" aria-valuemin="0" aria-valuemax="100" style="width: 81.25%"></div>
@@ -484,24 +484,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest14" id="a40" value=1 data-toggle="tooltip" title="a" onclick="question15()" />
+                <input type="radio" name="quest14" id="a40" value=1 data-toggle="tooltip" title="a" onclick="question('q14', 'q15')" />
                 <label for="a40" class="text-center">a) Scowl.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest14" id="a41" value=2 data-toggle="tooltip" title="b" onclick="question15()"/>
+                <input type="radio" name="quest14" id="a41" value=2 data-toggle="tooltip" title="b" onclick="question('q14', 'q15')"/>
                 <label for="a41">b) Shout or "blow up".</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest14" id="a42" value=3 data-toggle="tooltip" title="c" onclick="question15()"/>
+                <input type="radio" name="quest14" id="a42" value=3 data-toggle="tooltip" title="c" onclick="question('q14', 'q15')"/>
                 <label for="a42">c) Stomp off and slam doors.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question15()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q14', 'q15')"/>
               </div>
             </div>
              <!--question 15-->
-             <div id="question15">
+             <div id="q15">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="87.5" aria-valuemin="0" aria-valuemax="100" style="width: 87.5%"></div>
@@ -516,24 +516,24 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="radio" name="quest15" id="a43" value=1 data-toggle="tooltip" title="a" onclick="question16()" />
+                <input type="radio" name="quest15" id="a43" value=1 data-toggle="tooltip" title="a" onclick="question('q15', 'q16')" />
                 <label for="a43" class="text-center">a) Write it out to see if it looks right.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest15" id="a44" value=2 data-toggle="tooltip" title="b" onclick="question16()"/>
+                <input type="radio" name="quest15" id="a44" value=2 data-toggle="tooltip" title="b" onclick="question('q15', 'q16')"/>
                 <label for="a44">b) Sound it out.</label>
               </div>
               <div class="row justify-content-center">
-                <input type="radio" name="quest15" id="a45" value=3 data-toggle="tooltip" title="c" onclick="question16()"/>
+                <input type="radio" name="quest15" id="a45" value=3 data-toggle="tooltip" title="c" onclick="question('q15', 'q16')"/>
                 <label for="a45">c) Write it out to see if it feels right.</label>
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question16()"/>
+                <input type="button" value="Skip" class="btn btn-secondary mx-auto" onclick="question('q15', 'q16')"/>
               </div>
             </div>
              <!--question 16-->
-             <div id="question16">
+             <div id="q16">
               <div class="row justify-content-center">
                 <div class="progress">
                   <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="93.75" aria-valuemin="0" aria-valuemax="100" style="width: 93.75%"></div>
@@ -561,7 +561,7 @@
               </div>
               &nbsp;
               <div class="row justify-content-center">
-                <input type="button" value="Results" class="btn btn-secondary mx-auto" onclick="results()"/>
+                <input type="button" value="Results" class="btn btn-secondary mx-auto" onclick="results('q16', 'result')"/>
               </div>
             </div>
             </form>
