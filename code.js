@@ -1,4 +1,11 @@
 /**
+ * disables 'Next' button until radio button selected
+ */
+function nextQuestion(nextId) {
+    document.getElementById(nextId).disabled = false;
+}
+
+/**
  * hides current question shows next question
  */
 function question(questionHide, questionReveal) {
@@ -173,9 +180,6 @@ function calculateResults() {
   } else if (result >= 0.5) {
     msg = "You answered mostly A, you may have a VISUAL learning style.";
     document.getElementById("resultsImg3").style.display = 'inline-block';
-  } else {
-    msg = "Unable to provide an accurate result. Please re-take the quiz.";
-    document.getElementById("resultsImg4").style.display = 'inline-block';
-  }
+  } 
   document.getElementById("result").innerHTML = msg
 }
