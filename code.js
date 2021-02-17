@@ -174,7 +174,7 @@ function calculateResults() {
     msg = "You answered mostly A, you may have a VISUAL learning style.";
     document.getElementById("resultsImg3").style.display = 'inline-block';
   } else {
-    msg = "Unable to provide an accurate result. Please refresh the page and re-take the quiz.";
+    msg = "Unable to provide an accurate result. Please re-take the quiz.";
     document.getElementById("resultsImg4").style.display = 'inline-block';
   }
   document.getElementById("result").innerHTML = msg
